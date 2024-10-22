@@ -1,38 +1,194 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.kanban-board {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .display-button-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .display-button {
+    background-color: #cfd4d7;
+    color: rgba(11, 1, 1, 0.877);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
   }
+  
+  .display-options {
+    margin-top: 10px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .display-options h4 {
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  
+  .display-options button {
+    background-color: #f4f4f4;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 14px;
+  }
+  
+  .tasks-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px;
+  }
+  
+  .task-group {
+    flex: 1;
+    min-width: 500px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 6px;
+  }
+  
+  .task-group h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 5px;
+  }
+  
+  .task-card {
+    background-color: #ffffff;
+    border-radius: 6px;
+    padding: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 1px 5px rgba(125, 128, 129, 0.908);
+    transition: box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .task-card:hover {
+    box-shadow: 0 4px 15px rgba(8, 8, 8, 0.807);
+  }
+  
+  .task-card h5 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #161616;
+  }
+  
+  .task-card p {
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .display-icon {
+    width: 16px; 
+    height: 16px;
+    margin-right: 8px; 
+    vertical-align: middle; 
 }
+.task-priority-icon {
+    width: 16px; 
+    height: 16px;
+    margin-right: 8px; 
+    vertical-align: middle; 
+}
+.task-card h5 {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  
+  .feature-request-text {
+    color: #101010; 
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  .feature-request-text:hover {
+    color: #080808;
+  }
+  
+  
+  .task-details {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid #e5e7eb;
+  }
+  
+  .task-details p {
+    color: #6b7280;
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+  
+  .task-details p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .task-label {
+    color: #4b5563;
+    font-weight: 500;
+    margin-right: 8px;
+  }
+  
+  .priority-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    vertical-align: middle;
+  }
+
+  .status-icon {
+    width: 20px;
+    margin-right: 8px;
+  }
+
+  .task-number {
+  position: absolute;
+  top: 5px;   
+  left: 5px; 
+  background-color: rgba(0, 0, 0, 0.1); 
+  padding: 2px 5px;
+  font-size: 12px;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.group-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+  }
+  
+  .header-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .header-right-icons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .priority-icon, .status-icon, .header-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+  }
+  
+  
